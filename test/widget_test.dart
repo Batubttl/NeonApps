@@ -7,8 +7,9 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-
 import 'package:neon_apps_full1/main.dart';
+
+// ignore: avoid_relative_lib_imports
 
 void main() {
   testWidgets('Counter increments smoke test', (WidgetTester tester) async {

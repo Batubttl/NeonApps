@@ -1,4 +1,5 @@
-import 'package:neon_apps_full1/model/member_model.dart';
+import 'package:neon_apps_full1/model/model.dart';
+import 'team_enum.dart';
 
 class ContactInformation {
   String phoneNumber;
@@ -20,17 +21,19 @@ class NeonAcademyMember {
   String memberLevel;
   String homeTown;
   int age;
+  Team team;
+
   ContactInformation contactInformation;
 
-  NeonAcademyMember({
-    required this.fullName,
-    required this.title,
-    required this.horoscope,
-    required this.memberLevel,
-    required this.homeTown,
-    required this.age,
-    required this.contactInformation,
-  });
+  NeonAcademyMember(
+      {required this.fullName,
+      required this.title,
+      required this.horoscope,
+      required this.memberLevel,
+      required this.homeTown,
+      required this.age,
+      required this.contactInformation,
+      required this.team});
   @override
   String toString() {
     return '''
@@ -54,68 +57,74 @@ void printMembers(List<NeonAcademyMember> members) {
   }
 }
 
+var contact1 = ContactInformation(
+    phoneNumber: "543-987-4796", email: "denizyilmaz@gmail.com");
+
+var contact2 = ContactInformation(
+    phoneNumber: "567-784-3654", email: "firatakin@gmail.com");
+
+var contact3 = ContactInformation(
+    phoneNumber: "597-123-6547", email: "ceyhunsozen@gmail.com");
+
+var contact4 = ContactInformation(
+    phoneNumber: "567-456-3468", email: "eylulzengin@gmail.com");
+
+var contact5 = ContactInformation(
+    phoneNumber: "123-657-2729", email: "bakialtun@gmail.com");
+
+var member1 = NeonAcademyMember(
+    fullName: "Deniz",
+    title: "Android Developer",
+    horoscope: "Aries",
+    memberLevel: "A3",
+    homeTown: "Mersin",
+    age: 27,
+    team: Team.androidDev,
+    contactInformation: contact1);
+
+var member2 = NeonAcademyMember(
+    fullName: "Fırat",
+    title: "IOS Developer",
+    horoscope: "Gemini",
+    memberLevel: "A3",
+    homeTown: "Manisa",
+    age: 32,
+    team: Team.iosDev,
+    contactInformation: contact2);
+
+var member3 = NeonAcademyMember(
+    fullName: "Ceyhun",
+    title: "IOS Developer",
+    horoscope: "Lion",
+    memberLevel: "A3",
+    homeTown: "Sozen",
+    age: 25,
+    team: Team.iosDev,
+    contactInformation: contact3);
+
+var member4 = NeonAcademyMember(
+    fullName: "Eylül",
+    title: "Flutter Developer",
+    horoscope: "Aries",
+    memberLevel: "A1",
+    homeTown: "Zengin",
+    age: 21,
+    team: Team.flutterDev,
+    contactInformation: contact4);
+
+var member5 = NeonAcademyMember(
+    fullName: "Baki",
+    title: "UI Designer",
+    horoscope: "Libra",
+    memberLevel: "C1",
+    homeTown: "Altun",
+    age: 25,
+    team: Team.designTeam,
+    contactInformation: contact5);
+
+var members = [member1, member2, member3, member4, member5];
+
 void main() {
-  var contact1 = ContactInformation(
-      phoneNumber: "543-987-4796", email: "denizyilmaz@gmail.com");
-
-  var contact2 = ContactInformation(
-      phoneNumber: "567-784-3654", email: "firatakin@gmail.com");
-
-  var contact3 = ContactInformation(
-      phoneNumber: "597-123-6547", email: "ceyhunsozen@gmail.com");
-
-  var contact4 = ContactInformation(
-      phoneNumber: "567-456-3468", email: "eylulzengin@gmail.com");
-
-  var contact5 = ContactInformation(
-      phoneNumber: "123-657-2729", email: "bakialtun@gmail.com");
-
-  var member1 = NeonAcademyMember(
-      fullName: "Deniz",
-      title: "Flutter Developer",
-      horoscope: "Aries",
-      memberLevel: "A3",
-      homeTown: "Mersin",
-      age: 27,
-      contactInformation: contact1);
-
-  var member2 = NeonAcademyMember(
-      fullName: "Fırat",
-      title: "IOS Developer",
-      horoscope: "Gemini",
-      memberLevel: "A3",
-      homeTown: "Manisa",
-      age: 32,
-      contactInformation: contact2);
-
-  var member3 = NeonAcademyMember(
-      fullName: "Ceyhun",
-      title: "IOS Developer",
-      horoscope: "Lion",
-      memberLevel: "A3",
-      homeTown: "Sozen",
-      age: 25,
-      contactInformation: contact3);
-
-  var member4 = NeonAcademyMember(
-      fullName: "Eylül",
-      title: "Flutter Developer",
-      horoscope: "Aries",
-      memberLevel: "A1",
-      homeTown: "Zengin",
-      age: 21,
-      contactInformation: contact4);
-
-  var member5 = NeonAcademyMember(
-      fullName: "Baki",
-      title: "Flutter Developer",
-      horoscope: "Libra",
-      memberLevel: "C1",
-      homeTown: "Altun",
-      age: 25,
-      contactInformation: contact5);
-
-  var members = [member1, member2, member3, member4, member5];
   printMembers(members);
 
   //1- DELETE
@@ -161,6 +170,7 @@ void main() {
       memberLevel: "C1",
       homeTown: "Samsun",
       age: 37,
+      team: Team.flutterDev,
       contactInformation: ContactInformation(
           phoneNumber: "543-754-9895", email: "ahmetsamsun@gmail.com"));
 

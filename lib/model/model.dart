@@ -18,7 +18,7 @@ class NeonAcademyMember {
   String memberLevel;
   String homeTown;
   int age;
-  ContactInformation contactInformation; 
+  ContactInformation contactInformation;
 
   NeonAcademyMember({
     required this.fullName,

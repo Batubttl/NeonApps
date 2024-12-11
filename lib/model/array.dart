@@ -24,6 +24,7 @@ class NeonAcademyMember {
   Team team;
 
   ContactInformation contactInformation;
+  String? newTitle;
 
   NeonAcademyMember(
       {required this.fullName,
@@ -32,6 +33,7 @@ class NeonAcademyMember {
       required this.memberLevel,
       required this.homeTown,
       required this.age,
+      this.newTitle,
       required this.contactInformation,
       required this.team});
   @override
@@ -99,7 +101,7 @@ var member3 = NeonAcademyMember(
     memberLevel: "A3",
     homeTown: "Sozen",
     age: 25,
-    team: Team.iosDev,
+    team: Team.flutterDev,
     contactInformation: contact3);
 
 var member4 = NeonAcademyMember(

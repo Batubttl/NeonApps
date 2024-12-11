@@ -21,6 +21,7 @@ class NeonAcademyMember {
   String memberLevel;
   String homeTown;
   int age;
+  int? motivationLevel;
   Team team;
 
   ContactInformation contactInformation;
@@ -34,6 +35,7 @@ class NeonAcademyMember {
       required this.homeTown,
       required this.age,
       this.newTitle,
+      this.motivationLevel,
       required this.contactInformation,
       required this.team});
   @override
@@ -82,6 +84,7 @@ var member1 = NeonAcademyMember(
     homeTown: "Mersin",
     age: 27,
     team: Team.androidDev,
+    motivationLevel: 15,
     contactInformation: contact1);
 
 var member2 = NeonAcademyMember(
@@ -92,6 +95,7 @@ var member2 = NeonAcademyMember(
     homeTown: "Manisa",
     age: 32,
     team: Team.iosDev,
+    motivationLevel: 2,
     contactInformation: contact2);
 
 var member3 = NeonAcademyMember(
@@ -102,6 +106,7 @@ var member3 = NeonAcademyMember(
     homeTown: "Sozen",
     age: 25,
     team: Team.flutterDev,
+    motivationLevel: 0,
     contactInformation: contact3);
 
 var member4 = NeonAcademyMember(
@@ -112,6 +117,7 @@ var member4 = NeonAcademyMember(
     homeTown: "Zengin",
     age: 21,
     team: Team.flutterDev,
+    motivationLevel: 1,
     contactInformation: contact4);
 
 var member5 = NeonAcademyMember(
@@ -122,6 +128,7 @@ var member5 = NeonAcademyMember(
     homeTown: "Altun",
     age: 25,
     team: Team.designTeam,
+    motivationLevel: null,
     contactInformation: contact5);
 
 var members = [member1, member2, member3, member4, member5];

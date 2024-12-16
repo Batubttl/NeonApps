@@ -104,7 +104,6 @@ class HomeScreen extends StatelessWidget {
   }
 }
 
-// Hesap Kartı Widget'ı
 class AccountCard extends StatelessWidget {
   final String accountName;
   final double balance;

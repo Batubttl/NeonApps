@@ -1,3 +1,4 @@
+// ignore: file_names
 import 'package:flutter/material.dart';
 
 class SpecialButton extends StatefulWidget {
@@ -93,9 +94,9 @@ class _SpecialButtonState extends State<SpecialButton> {
             },
             child: Text(
               isYellow ? 'Make me Purple' : 'Make me Yellow!',
-              style: TextStyle(fontSize: 20, color: Colors.black),
+              style: const TextStyle(fontSize: 20, color: Colors.black),
             )),
-        SizedBox(
+        const SizedBox(
           height: 20,
         ),
         DropdownButton(
@@ -112,10 +113,10 @@ class _SpecialButtonState extends State<SpecialButton> {
               });
               if (newHelp == 'Call for backup') {
                 ScaffoldMessenger.of(context)
-                    .showSnackBar(SnackBar(content: Text('BackUp is coming!')));
+                    .showSnackBar(const SnackBar(content: Text('BackUp is coming!')));
               } else if (newHelp == 'Warning Issue') {
                 ScaffoldMessenger.of(context).showSnackBar(
-                    SnackBar(content: Text('Issued  Already Warning')));
+                    const SnackBar(content: Text('Issued  Already Warning')));
               }
             })),
         ElevatedButton(

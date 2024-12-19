@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:neon_apps_full1/layout/flexible.dart';
+import 'package:neon_apps_full1/UI/Text_field.dart';
 
 void main() {
   runApp(const MyApp());
@@ -19,9 +19,9 @@ class MyApp extends StatelessWidget {
             appBarTheme: const AppBarTheme(
           centerTitle: true,
           systemOverlayStyle: SystemUiOverlayStyle.light,
-          backgroundColor: Colors.transparent,
+          backgroundColor: Colors.purple,
           elevation: 0,
         )),
-        home: FinSmartApp());
+        home: const WickedQueensView());
   }
 }

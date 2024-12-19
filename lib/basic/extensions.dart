@@ -1,11 +1,11 @@
-extension stringExtensions on String {
+extension StringX on String {
   bool get isPalindrome {
     String reversed = split('').reversed.join('');
     return this == reversed;
   }
 }
 
-extension intExtensions on int {
+extension IntX on int {
   bool get isPrime {
     if (this < 2) return false;
     for (int i = 2; i <= this ~/ 2; i++) {
@@ -17,18 +17,18 @@ extension intExtensions on int {
   }
 }
 
-extension dateTimeExtensions on DateTime {
+extension DateX on DateTime {
   int daysBetween(DateTime other) {
     return other.difference(this).inDays.abs();
   }
 }
 
-extension boolExtensions on bool {
+extension BoolX on bool {
   bool and(bool other) => this && other;
   bool or(bool other) => this || other;
 }
 
-extension setExtensions<T> on Set<T> {
+extension SetX<T> on Set<T> {
   Set<T> get unique => toSet();
 }
 

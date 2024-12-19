@@ -1,4 +1,3 @@
-import 'package:neon_apps_full1/model/model.dart';
 import 'team_enum.dart';
 
 class ContactInformation {

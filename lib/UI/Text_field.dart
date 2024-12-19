@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
 
 class WickedQueensView extends StatefulWidget {
-  WickedQueensView({super.key});
+  const WickedQueensView({super.key});
 
   @override
   State<WickedQueensView> createState() => _WickedQueensViewState();
@@ -34,28 +33,28 @@ class _WickedQueensViewState extends State<WickedQueensView> {
       ),
       body: Column(
         children: [
-          SizedBox(
+          const SizedBox(
             height: 100,
           ),
           Center(
             child: (TextField(
-              decoration: InputDecoration(
+              decoration: const InputDecoration(
                   border: OutlineInputBorder(),
                   labelText: 'Name',
                   hintText: 'Enter name and Surname'),
-              style: TextStyle(color: Colors.red, fontWeight: FontWeight.bold),
+              style: const TextStyle(color: Colors.red, fontWeight: FontWeight.bold),
               textInputAction: TextInputAction.done,
               onSubmitted: (_) {
                 FocusScope.of(context).unfocus();
               },
             )),
           ),
-          SizedBox(
+          const SizedBox(
             height: 20,
           ),
           TextField(
             decoration: InputDecoration(
-                border: OutlineInputBorder(),
+                border: const OutlineInputBorder(),
                 labelText: "Email",
                 hintText: "Enter Email",
                 errorText: errorMessage.isNotEmpty ? errorMessage : null),
@@ -64,10 +63,10 @@ class _WickedQueensViewState extends State<WickedQueensView> {
               validateEmail(value);
             },
           ),
-          SizedBox(
+          const SizedBox(
             height: 20,
           ),
-          TextField(
+          const TextField(
             decoration: InputDecoration(
                 border: OutlineInputBorder(),
                 labelText: 'Phone Number',
@@ -82,7 +81,7 @@ class _WickedQueensViewState extends State<WickedQueensView> {
               style: ElevatedButton.styleFrom(
                 backgroundColor: Colors.purple,
               ),
-              child: Text("Kayıt ol"))
+              child: const Text("Kayıt ol"))
         ],
       ),
     );

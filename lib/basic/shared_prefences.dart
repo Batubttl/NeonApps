@@ -1,8 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/container.dart';
-import 'package:flutter/src/widgets/framework.dart';
 import 'package:shared_preferences/shared_preferences.dart';
-import 'dart:io';
 
 class DreamDestinationsApp extends StatefulWidget {
   const DreamDestinationsApp({super.key});
@@ -17,12 +14,11 @@ class _DreamDestinationsAppState extends State<DreamDestinationsApp> {
   bool _visited = false;
 
   String _savedplace = "Not yet";
-  int _savedTime = 0;
+  final int _savedTime = 0;
   bool _savedVisitedTime = false;
 
   @override
   void initState() {
-    // TODO: implement initState
     super.initState();
     _loadData();
   }
@@ -50,11 +46,11 @@ class _DreamDestinationsAppState extends State<DreamDestinationsApp> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("TravelApp"),
+        title: const Text("TravelApp"),
         centerTitle: true,
       ),
       body: Padding(
-        padding: EdgeInsets.all(30),
+        padding: const EdgeInsets.all(30),
         child: Column(
           children: [
             Text("Saved Place : $_savedplace\n"
@@ -62,18 +58,18 @@ class _DreamDestinationsAppState extends State<DreamDestinationsApp> {
                 "Saved Place : $_savedVisitedTime\n"),
             TextField(
               controller: _placeController,
-              decoration: InputDecoration(
+              decoration: const InputDecoration(
                   labelText:
                       ("What is the name of the place you want to visit?")),
             ),
             TextField(
               controller: _timeVisitedController,
-              decoration: InputDecoration(
+              decoration: const InputDecoration(
                   labelText: "How many times have you visited this place?"),
               keyboardType: TextInputType.number,
             ),
             SwitchListTile(
-              title: Text("Have you visited this place?"),
+              title: const Text("Have you visited this place?"),
               value: _savedVisitedTime,
               onChanged: (bool value) {
                 setState(() {
@@ -83,13 +79,13 @@ class _DreamDestinationsAppState extends State<DreamDestinationsApp> {
             ),
             Row(
               children: [
-                Text("Have you been this place before ? "),
-                SizedBox(
+                const Text("Have you been this place before ? "),
+                const SizedBox(
                   width: 20,
                 ),
                 ElevatedButton(
                   onPressed: _saveData,
-                  child: Text("Save Data"),
+                  child: const Text("Save Data"),
                 ),
               ],
             )

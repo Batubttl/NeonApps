@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-final String welcomeMessage = "WELCOME TO COMEDY CLUB";
+const String welcomeMessage = "WELCOME TO COMEDY CLUB";
 
 class ComedyClubScreen extends StatefulWidget {
   const ComedyClubScreen({super.key});
@@ -22,9 +22,8 @@ class _ComedyClubScreenState extends State<ComedyClubScreen> {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-          
             Image.asset(
-              'assets/comedyclub.jpeg', 
+              'assets/comedyclub.jpeg',
               width: double.infinity,
               height: 200,
               fit: BoxFit.cover,
@@ -160,14 +159,14 @@ class _ComedyClubScreenState extends State<ComedyClubScreen> {
     );
   }
 
-  Widget _galleryImage(String ImagePath) {
+  Widget _galleryImage(String imagePath) {
     return Container(
       margin: const EdgeInsets.symmetric(horizontal: 8),
       width: 120,
       child: ClipRRect(
         borderRadius: BorderRadiusDirectional.circular(10),
         child: Image.asset(
-          ImagePath,
+          imagePath,
           fit: BoxFit.cover,
         ),
       ),

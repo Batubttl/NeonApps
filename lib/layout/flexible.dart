@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(FinSmartApp());
+  runApp(const FinSmartApp());
 }
 
 class FinSmartApp extends StatelessWidget {
+  const FinSmartApp({super.key});
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -12,17 +14,19 @@ class FinSmartApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: HomeScreen(),
+      home: const HomeScreen(),
     );
   }
 }
 
 class HomeScreen extends StatelessWidget {
+  const HomeScreen({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('FinnSmart'),
+        title: const Text('FinnSmart'),
         centerTitle: true,
       ),
       body: Column(
@@ -33,7 +37,7 @@ class HomeScreen extends StatelessWidget {
             width: 300,
             child: Image.asset('assets/indrmsesdes.png'),
           ),
-          SizedBox(
+          const SizedBox(
             height: 100,
           ),
           Padding(
@@ -41,11 +45,11 @@ class HomeScreen extends StatelessWidget {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Text(
+                const Text(
                   'Hoş Geldiniz, Sarah!',
                   style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
                 ),
-                SizedBox(height: 8),
+                const SizedBox(height: 8),
                 Text(
                   'Finansal durumunuzu kolayca yönetin.',
                   style: TextStyle(fontSize: 16, color: Colors.grey[700]),
@@ -59,7 +63,7 @@ class HomeScreen extends StatelessWidget {
             child: Padding(
               padding: const EdgeInsets.symmetric(horizontal: 16.0),
               child: ListView(
-                children: [
+                children: const [
                   AccountCard(accountName: 'Banka Hesabı', balance: 4500.75),
                   AccountCard(accountName: 'Yatırım Hesabı', balance: 15000.25),
                   AccountCard(accountName: 'Nakit', balance: 500.0),
@@ -84,7 +88,7 @@ class HomeScreen extends StatelessWidget {
                     },
                   ),
                 ),
-                SizedBox(width: 16),
+                const SizedBox(width: 16),
                 Flexible(
                   flex: 1,
                   child: ActionButton(
@@ -108,7 +112,7 @@ class AccountCard extends StatelessWidget {
   final String accountName;
   final double balance;
 
-  const AccountCard({
+  const AccountCard({super.key, 
     required this.accountName,
     required this.balance,
   });
@@ -116,18 +120,18 @@ class AccountCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Card(
-      margin: EdgeInsets.symmetric(vertical: 8.0),
+      margin: const EdgeInsets.symmetric(vertical: 8.0),
       child: ListTile(
         title: Text(
           accountName,
-          style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+          style: const TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
         ),
         subtitle: Text(
           'Bakiye: ₺${balance.toStringAsFixed(2)}',
           style: TextStyle(fontSize: 16, color: Colors.grey[700]),
         ),
         leading:
-            Icon(Icons.account_balance_wallet, size: 32, color: Colors.blue),
+            const Icon(Icons.account_balance_wallet, size: 32, color: Colors.blue),
       ),
     );
   }
@@ -139,7 +143,7 @@ class ActionButton extends StatelessWidget {
   final String label;
   final VoidCallback onPressed;
 
-  const ActionButton({
+  const ActionButton({super.key, 
     required this.icon,
     required this.label,
     required this.onPressed,
@@ -152,7 +156,7 @@ class ActionButton extends StatelessWidget {
       icon: Icon(icon, size: 24),
       label: Text(label),
       style: ElevatedButton.styleFrom(
-        padding: EdgeInsets.symmetric(vertical: 12.0, horizontal: 16.0),
+        padding: const EdgeInsets.symmetric(vertical: 12.0, horizontal: 16.0),
       ),
     );
   }

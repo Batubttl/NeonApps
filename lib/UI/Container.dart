@@ -1,6 +1,10 @@
+// ignore: duplicate_ignore
+// ignore: file_names
+// ignore_for_file: file_names
+
 import 'package:flutter/material.dart';
 
-final String appName = "Awesome Gallery";
+const String appName = "Awesome Gallery";
 
 class AwesomeGallery extends StatefulWidget {
   const AwesomeGallery({super.key});
@@ -21,10 +25,10 @@ class _AwesomeGalleryState extends State<AwesomeGallery> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text(appName),
+        title: const Text(appName),
       ),
       body: GridView.builder(
-        padding: EdgeInsets.all(10),
+        padding: const EdgeInsets.all(10),
         gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
           crossAxisCount: 2,
           crossAxisSpacing: 2,
@@ -61,7 +65,7 @@ class _AwesomeGalleryState extends State<AwesomeGallery> {
                     ),
                   )),
                   Padding(
-                    padding: EdgeInsets.all(4),
+                    padding: const EdgeInsets.all(4),
                     child: Text(
                       image['title']!,
                       style: const TextStyle(

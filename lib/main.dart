@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:yeni_neonapps/UI/page_control.dart';
-import 'package:yeni_neonapps/UI/steppers.dart';
 
 void main() {
   runApp(const MyApp());

@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:yeni_neonapps/sliders.dart';
-import 'package:yeni_neonapps/steppers.dart';
-import 'package:yeni_neonapps/switches.dart';
+import 'package:yeni_neonapps/UI/page_control.dart';
+import 'package:yeni_neonapps/UI/steppers.dart';
 
 void main() {
   runApp(const MyApp());
@@ -24,6 +23,6 @@ class MyApp extends StatelessWidget {
           backgroundColor: Colors.purple,
           elevation: 0,
         )),
-        home: const StepperViewsApp());
+        home: const PageControlViewApp());
   }
 }

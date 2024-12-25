@@ -76,7 +76,7 @@ class AlertControlView extends StatelessWidget {
           // 4. Buton: TextField içeren alert
           ElevatedButton(
               onPressed: () {
-                TextEditingController _controller = TextEditingController();
+                TextEditingController controller = TextEditingController();
                 showDialog(
                   context: context,
                   builder: (context) => AlertDialog(
@@ -86,7 +86,7 @@ class AlertControlView extends StatelessWidget {
                           MainAxisSize.min, // Alert'in boyutunu sınırlamak için
                       children: [
                         TextField(
-                          controller: _controller,
+                          controller: controller,
                           decoration:
                               InputDecoration(hintText: 'Enter your name!'),
                         ),
@@ -95,7 +95,7 @@ class AlertControlView extends StatelessWidget {
                     actions: [
                       TextButton(
                         onPressed: () {
-                          print("This is: ${_controller.text}");
+                          print("This is: ${controller.text}");
                         },
                         child: Text('Show me the Name!'),
                       ),

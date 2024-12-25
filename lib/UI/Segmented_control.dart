@@ -17,7 +17,6 @@ final Map<int, Widget> _segments = const {
 double _controllerHeight = 50;
 
 class _SegmententedDinaViewState extends State<SegmententedDinaView> {
-  @override
   void _onSegmentChanged(int value) {
     setState(() {
       _selectedSegment = value;
@@ -33,6 +32,7 @@ class _SegmententedDinaViewState extends State<SegmententedDinaView> {
 
   int _selectedSegment = 0;
 
+  @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(

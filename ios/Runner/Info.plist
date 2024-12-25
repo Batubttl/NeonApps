@@ -5,7 +5,11 @@
 	<key>CFBundleDevelopmentRegion</key>
 	<string>$(DEVELOPMENT_LANGUAGE)</string>
 	<key>CFBundleDisplayName</key>
+<<<<<<< HEAD
 	<string>Yeni Neonapps</string>
+=======
+	<string>Neon Apps Full1</string>
+>>>>>>> 82c7206f25a9a1fc028e57327db131e7eca85cd1
 	<key>CFBundleExecutable</key>
 	<string>$(EXECUTABLE_NAME)</string>
 	<key>CFBundleIdentifier</key>
@@ -13,7 +17,11 @@
 	<key>CFBundleInfoDictionaryVersion</key>
 	<string>6.0</string>
 	<key>CFBundleName</key>
+<<<<<<< HEAD
 	<string>yeni_neonapps</string>
+=======
+	<string>neon_apps_full1</string>
+>>>>>>> 82c7206f25a9a1fc028e57327db131e7eca85cd1
 	<key>CFBundlePackageType</key>
 	<string>APPL</string>
 	<key>CFBundleShortVersionString</key>
@@ -41,6 +49,11 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
+<<<<<<< HEAD
+=======
+	<key>UIViewControllerBasedStatusBarAppearance</key>
+	<false/>
+>>>>>>> 82c7206f25a9a1fc028e57327db131e7eca85cd1
 	<key>CADisableMinimumFrameDurationOnPhone</key>
 	<true/>
 	<key>UIApplicationSupportsIndirectInputEvents</key>

@@ -97,7 +97,11 @@ add_custom_command(
   COMMAND ${CMAKE_COMMAND} -E env
     ${FLUTTER_TOOL_ENVIRONMENT}
     "${FLUTTER_ROOT}/packages/flutter_tools/bin/tool_backend.bat"
+<<<<<<< HEAD
       ${FLUTTER_TARGET_PLATFORM} $<CONFIG>
+=======
+      windows-x64 $<CONFIG>
+>>>>>>> 82c7206f25a9a1fc028e57327db131e7eca85cd1
   VERBATIM
 )
 add_custom_target(flutter_assemble DEPENDS

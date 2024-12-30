@@ -7,7 +7,7 @@ class AlertControlView extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Alert Adventure'),
+        title: const Text('Alert Adventure'),
       ),
       body: Column(
         mainAxisAlignment: MainAxisAlignment.start,
@@ -16,14 +16,14 @@ class AlertControlView extends StatelessWidget {
               onPressed: () {
                 showDialog(
                   context: context,
-                  builder: (context) => AlertDialog(
+                  builder: (context) => const AlertDialog(
                     title: Text('Alert Dialog'),
                     content: Text('This is an alert dialog. '),
                   ),
                 );
               },
-              child: Text('Uyarı göster - 1 Buton yok')),
-          SizedBox(
+              child: const Text('Uyarı göster - 1 Buton yok')),
+          const SizedBox(
             height: 10,
           ),
           ElevatedButton(
@@ -31,20 +31,20 @@ class AlertControlView extends StatelessWidget {
                 showDialog(
                   context: context,
                   builder: (context) => AlertDialog(
-                    title: Text('Hello fellas'),
-                    content: Text('Fellas need some coffee to calm down'),
+                    title: const Text('Hello fellas'),
+                    content: const Text('Fellas need some coffee to calm down'),
                     actions: [
                       TextButton(
                           onPressed: () {
                             print("Clicked Confirm");
                           },
-                          child: Text('Confirm')),
+                          child: const Text('Confirm')),
                     ],
                   ),
                 );
               },
-              child: Text('Fellas Buton Warning')),
-          SizedBox(
+              child: const Text('Fellas Buton Warning')),
+          const SizedBox(
             height: 10,
           ),
           ElevatedButton(
@@ -52,25 +52,25 @@ class AlertControlView extends StatelessWidget {
                 showDialog(
                   context: context,
                   builder: (context) => AlertDialog(
-                    title: Text('Just Do IT!'),
-                    content: Text('Because you are unbeatable '),
+                    title: const Text('Just Do IT!'),
+                    content: const Text('Because you are unbeatable '),
                     actions: [
                       TextButton(
                           onPressed: () {
                             print('You did it!');
                           },
-                          child: Text('Confirm')),
+                          child: const Text('Confirm')),
                       TextButton(
                           onPressed: () {
                             print('You succeeded!');
                           },
-                          child: Text('Cancel')),
+                          child: const Text('Cancel')),
                     ],
                   ),
                 );
               },
-              child: Text('Sports Information Button!')),
-          SizedBox(
+              child: const Text('Sports Information Button!')),
+          const SizedBox(
             height: 10,
           ),
           // 4. Buton: TextField içeren alert
@@ -80,7 +80,7 @@ class AlertControlView extends StatelessWidget {
                 showDialog(
                   context: context,
                   builder: (context) => AlertDialog(
-                    title: Text('Give us Some Info About You!'),
+                    title: const Text('Give us Some Info About You!'),
                     content: Column(
                       mainAxisSize:
                           MainAxisSize.min, // Alert'in boyutunu sınırlamak için
@@ -88,7 +88,7 @@ class AlertControlView extends StatelessWidget {
                         TextField(
                           controller: controller,
                           decoration:
-                              InputDecoration(hintText: 'Enter your name!'),
+                              const InputDecoration(hintText: 'Enter your name!'),
                         ),
                       ],
                     ),
@@ -97,14 +97,14 @@ class AlertControlView extends StatelessWidget {
                         onPressed: () {
                           print("This is: ${controller.text}");
                         },
-                        child: Text('Show me the Name!'),
+                        child: const Text('Show me the Name!'),
                       ),
                     ],
                   ),
                 );
               },
-              child: Text('Enter Your Info')),
-          SizedBox(
+              child: const Text('Enter Your Info')),
+          const SizedBox(
             height: 10,
           ),
           ElevatedButton(
@@ -114,13 +114,13 @@ class AlertControlView extends StatelessWidget {
                   builder: (context) => Column(
                     children: [
                       ListTile(
-                        title: Text('Share Images'),
+                        title: const Text('Share Images'),
                         onTap: () {
                           print('Options 1 Selected');
                         },
                       ),
                       ListTile(
-                        title: Text('Share Files'),
+                        title: const Text('Share Files'),
                         onTap: () {
                           print('Options 2 Selected ! ');
                         },
@@ -129,15 +129,15 @@ class AlertControlView extends StatelessWidget {
                   ),
                 );
               },
-              child: Text("Show Action Sheet")),
-          SizedBox(
+              child: const Text("Show Action Sheet")),
+          const SizedBox(
             height: 10,
           ),
           ElevatedButton(
             onPressed: () {
               print("Paylaşım yapılıyor...");
             },
-            child: Text("Activity Controller Göster"),
+            child: const Text("Activity Controller Göster"),
           )
         ],
       ),

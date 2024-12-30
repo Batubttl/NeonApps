@@ -14,7 +14,7 @@ class _SwitchesViewAppState extends State<SwitchesViewApp> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Switches App'),
+        title: const Text('Switches App'),
       ),
       body: Center(
         child: Container(

@@ -14,7 +14,7 @@ class _SlidersViewAppState extends State<SlidersViewApp> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Sliders App'),
+        title: const Text('Sliders App'),
         backgroundColor: Colors.redAccent,
       ),
       body: Center(
@@ -45,7 +45,7 @@ class _SlidersViewAppState extends State<SlidersViewApp> {
                 inactiveColor: Colors.green,
               ),
             ),
-            SizedBox(height: 20),
+            const SizedBox(height: 20),
             Text('Aşama : $slidersvalue'),
             if (slidersvalue >= 50) Image.asset('assets/reddragon.jpg'),
             if (slidersvalue < 50) Image.asset('assets/greendragon.jpg')

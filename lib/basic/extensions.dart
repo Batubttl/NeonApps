@@ -50,6 +50,7 @@ void main() {
   DateTime date2 = DateTime(1968, 10, 19);
   print(date1.daysBetween(date2));
 
+  // ignore: equal_elements_in_set
   Set<int> numbers = {1, 2, 2, 2, 5};
   print(numbers.unique);
   var family = {"John Doe": "Doe", "Jane Smith": "Smith", "Alice Doe": "Doe"};

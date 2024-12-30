@@ -9,12 +9,11 @@ class PageControlViewApp extends StatefulWidget {
 
 class _PageControlViewAppState extends State<PageControlViewApp> {
   final PageController _controller = PageController();
-  int _currentpage = 0;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Princes View App'),
+        title: const Text('Princes View App'),
         backgroundColor: Colors.blue,
       ),
       body: Column(
@@ -23,14 +22,15 @@ class _PageControlViewAppState extends State<PageControlViewApp> {
               child: PageView(
             controller: _controller,
             onPageChanged: (page) {
-              setState(() {
-                _currentpage = page;
-              });
+              setState(() {});
             },
             children: [
-              _buildPage('Page1', 'page 1 descriptions', 'assets/Atina.jpeg'),
-              _buildPage('Page2', 'page 2 descriptions', 'assets/dag.jpg'),
-              _buildPage('Page3', 'page 3 descriptions', 'assets/doga.jpg'),
+              _buildPage(
+                  'Batu Yaren', 'Bir aşkın Başlangıcı!', 'assets/by.jpeg'),
+              _buildPage('Sadece Yaren', 'Benim Birtanecik SEVGİLİM!',
+                  'assets/yrn.jpg'),
+              _buildPage(
+                  'Bihterim!', 'Aşkımızın Meyvesi :)', 'assets/biho.webp'),
             ],
           ))
         ],

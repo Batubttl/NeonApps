@@ -13,7 +13,7 @@ final List<Passenger> passengers = [
       name: "Yaren",
       surname: "Gokmen",
       age: 23,
-      homeTown: "Ordu",
+      homeTown: "Mexico City",
       mail: "yarengokmen@gmail.com"),
   Passenger(
       name: "Batuhan",
@@ -57,6 +57,18 @@ final List<Passenger> passengers = [
       age: 15,
       homeTown: "Bitlis",
       mail: "mehmetakin@gmail.com"),
+  Passenger(
+      name: 'Mini',
+      surname: 'Mouse',
+      age: 32,
+      homeTown: 'Disneyland',
+      mail: 'minidisney@gmail.com'),
+  Passenger(
+      name: 'Mickey',
+      surname: 'Mouse',
+      age: 26,
+      homeTown: 'Disneyland',
+      mail: 'mickeydisney@gmail.com')
 ];
 
 class _FirstViewDataState extends State<FirstViewData> {

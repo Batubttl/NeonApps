@@ -14,7 +14,7 @@ class _StepperViewsAppState extends State<StepperViewsApp> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Sarah Clothes App'),
+        title: const Text('Sarah Clothes App'),
         backgroundColor: Colors.pink,
       ),
       body: Stepper(
@@ -40,18 +40,18 @@ class _StepperViewsAppState extends State<StepperViewsApp> {
         },
         steps: [
           Step(
-            title: Text('Step 1'),
-            content: Text('Content for Step 1'),
+            title: const Text('Step 1'),
+            content: const Text('Content for Step 1'),
             isActive: currentstep >= 0,
           ),
           Step(
-            title: Text('Step 2'),
-            content: Text('Content for Step 2'),
+            title: const Text('Step 2'),
+            content: const Text('Content for Step 2'),
             isActive: currentstep >= 1,
           ),
           Step(
-            title: Text('Step 3'),
-            content: Text('Content for Step 3'),
+            title: const Text('Step 3'),
+            content: const Text('Content for Step 3'),
             isActive: currentstep >= 2,
           ),
         ],

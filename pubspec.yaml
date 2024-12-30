@@ -32,6 +32,14 @@ dependencies:
     sdk: flutter
   shared_preferences: ^2.0.15
   cupertino_icons: ^1.0.2
+  image_picker: ^1.1.2
+  flutter_colorpicker: ^1.1.0
+  google_fonts: ^6.2.1
+  
+  url_launcher: ^6.1.7
+
+  pull_to_refresh: ^2.0.0
+
 
 dev_dependencies:
   flutter_test:

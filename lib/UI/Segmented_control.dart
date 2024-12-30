@@ -8,7 +8,7 @@ class SegmententedDinaView extends StatefulWidget {
   State<SegmententedDinaView> createState() => _SegmententedDinaViewState();
 }
 
-final Map<int, Widget> _segments = const {
+const Map<int, Widget> _segments = {
   0: Text('Neon Academy Members 1 '),
   1: Text('Neon Academies 2'),
   2: Text('Neon Aacademy Rising Stars 3')
@@ -36,7 +36,7 @@ class _SegmententedDinaViewState extends State<SegmententedDinaView> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Segmented Control View'),
+        title: const Text('Segmented Control View'),
       ),
       body: Center(
         child: Column(
@@ -47,7 +47,7 @@ class _SegmententedDinaViewState extends State<SegmententedDinaView> {
               onValueChanged: _onSegmentChanged,
               groupValue: _selectedSegment,
             ),
-            SizedBox(
+            const SizedBox(
               height: 20,
             ),
             Container(

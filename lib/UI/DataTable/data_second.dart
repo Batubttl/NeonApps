@@ -3,8 +3,7 @@ import 'package:yeni_neonapps/UI/DataTable/data_one.dart';
 
 class PassengerDetailPage extends StatelessWidget {
   final Passenger passenger;
-  const PassengerDetailPage({Key? key, required this.passenger})
-      : super(key: key);
+  const PassengerDetailPage({super.key, required this.passenger});
 
   @override
   Widget build(BuildContext context) {
@@ -13,7 +12,7 @@ class PassengerDetailPage extends StatelessWidget {
         title: Text('${passenger.name}' '${passenger.surname}'),
       ),
       body: Padding(
-        padding: EdgeInsets.all(16.0),
+        padding: const EdgeInsets.all(16.0),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [

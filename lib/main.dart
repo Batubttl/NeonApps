@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:yeni_neonapps/UI/alert_controllers.dart';
+import 'package:yeni_neonapps/UI/GridView/grid_view.dart';
 
 void main() {
   runApp(const MyApp());
@@ -22,6 +22,6 @@ class MyApp extends StatelessWidget {
           backgroundColor: Colors.purple,
           elevation: 0,
         )),
-        home: const AlertControlView());
+        home: const MermaidApp());
   }
 }

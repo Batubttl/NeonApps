@@ -1,3 +1,4 @@
+import 'dart:ui';
 import 'package:flutter/material.dart';
 import 'package:lottie/lottie.dart';
 
@@ -11,6 +12,7 @@ class LottieExample extends StatefulWidget {
 class _LottieExampleState extends State<LottieExample> {
   double _progress = 0.0;
   bool _isProcessing = false;
+  double _blurValue = 10.0;
 
   void _startProcessing() {
     setState(() {
@@ -22,8 +24,19 @@ class _LottieExampleState extends State<LottieExample> {
       setState(() {
         _progress = 1.0;
         _isProcessing = false;
+        _blurValue = 0.0;
       });
     });
+
+    // Simulate progress update
+    for (int i = 1; i <= 100; i++) {
+      Future.delayed(Duration(milliseconds: 50 * i), () {
+        setState(() {
+          _progress = i / 100;
+          _blurValue = 10.0 * (1 - _progress);
+        });
+      });
+    }
   }
 
   void _stopProcessing() {
@@ -44,20 +57,54 @@ class _LottieExampleState extends State<LottieExample> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             if (_isProcessing)
-              Lottie.asset(
-                'assets/Loading.json',
-                width: 200,
-                height: 200,
-                animate: true,
-                fit: BoxFit.cover,
-                onLoaded: (composition) {
-                  // Start the animation
-                },
+              Column(
+                children: [
+                  Lottie.asset(
+                    'assets/Loading.json',
+                    width: 200,
+                    height: 200,
+                    animate: true,
+                    fit: BoxFit.cover,
+                    onLoaded: (composition) {
+                      // Start the animation
+                    },
+                  ),
+                  const SizedBox(height: 20),
+                  CircularProgressIndicator(value: _progress),
+                ],
               ),
             if (!_isProcessing)
-              Text(
-                'Progress: ${(_progress * 100).toStringAsFixed(0)}%',
-                style: const TextStyle(fontSize: 24),
+              Column(
+                children: [
+                  Stack(
+                    alignment: Alignment.center,
+                    children: [
+                      Image.asset(
+                        'assets/biho.webp', // Replace with your image asset
+                        width: 200,
+                        height: 200,
+                        fit: BoxFit.cover,
+                      ),
+                      if (_progress < 1.0)
+                        BackdropFilter(
+                          filter: ImageFilter.blur(
+                            sigmaX: _blurValue,
+                            sigmaY: _blurValue,
+                          ),
+                          child: Container(
+                            width: 200,
+                            height: 200,
+                            color: Colors.transparent,
+                          ),
+                        ),
+                    ],
+                  ),
+                  const SizedBox(height: 20),
+                  Text(
+                    'Progress: ${(_progress * 100).toStringAsFixed(0)}%',
+                    style: const TextStyle(fontSize: 24),
+                  ),
+                ],
               ),
             const SizedBox(height: 20),
             ElevatedButton(
